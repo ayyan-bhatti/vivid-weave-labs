@@ -1,73 +1,77 @@
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 import Scene3D from './Scene3D';
 
 const stats = [
-  { value: '87%', label: 'Win Rate' },
-  { value: '+34%', label: 'Avg Monthly Return' },
-  { value: '2,400+', label: 'Active Members' },
-  { value: '3 Yrs', label: 'Track Record' },
+  { value: '500+', label: 'Community Members' },
+  { value: '3+', label: 'Years Experience' },
+  { value: 'Daily', label: 'Market Analysis' },
+  { value: '24/7', label: 'Community Access' },
 ];
 
 export default function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-      {/* Radial glow */}
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full opacity-20"
-        style={{ background: 'radial-gradient(circle, hsl(38 75% 55% / 0.3), transparent 70%)' }}
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full opacity-15"
+        style={{ background: 'radial-gradient(circle, hsl(142 71% 45% / 0.25), transparent 70%)' }}
       />
-      
+
       <Scene3D />
 
       <div className="relative z-10 container mx-auto px-6 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-gold-subtle bg-card/50 mb-8"
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-green-subtle bg-card/50 mb-8"
         >
-          <span className="w-2 h-2 rounded-full bg-primary animate-pulse-gold" />
-          <span className="text-sm text-muted-foreground">Now Accepting New Members</span>
+          <span className="w-2 h-2 rounded-full bg-primary animate-pulse-green" />
+          <span className="text-sm text-muted-foreground">Trading Education Community</span>
         </motion.div>
 
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.35 }}
-          className="font-heading text-6xl sm:text-7xl lg:text-8xl font-bold tracking-tight leading-[0.95]"
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="font-heading text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1]"
         >
-          <span className="text-foreground">Capital</span>
+          <span className="text-foreground">Learn. Trade.</span>
           <br />
-          <span className="text-gradient-gold">Crew</span>
+          <span className="text-gradient-green">Grow Together.</span>
         </motion.h1>
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.55 }}
-          className="mt-6 text-lg text-muted-foreground max-w-xl mx-auto leading-relaxed"
+          transition={{ duration: 0.5, delay: 0.5 }}
+          className="mt-6 text-base sm:text-lg text-muted-foreground max-w-xl mx-auto leading-relaxed"
         >
-          We help traders grow capital through smart strategies, disciplined execution, and real-time market intelligence.
+          A community of traders sharing knowledge, market analysis, and strategies. We believe in learning together and growing through discipline and education.
         </motion.p>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.7 }}
+          transition={{ duration: 0.5, delay: 0.65 }}
           className="flex items-center justify-center gap-4 mt-10"
         >
-          <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold px-8 glow-gold-sm">
-            Join Now →
-          </Button>
-          <Button size="lg" variant="outline" className="border-border text-foreground hover:bg-card">
-            View Results
-          </Button>
+          <Link to="/contact">
+            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold px-8 glow-green-sm">
+              Join the Community
+            </Button>
+          </Link>
+          <Link to="/about">
+            <Button size="lg" variant="outline" className="border-border text-foreground hover:bg-card">
+              Learn More
+            </Button>
+          </Link>
         </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.9 }}
+          transition={{ duration: 0.6, delay: 0.85 }}
           className="grid grid-cols-2 sm:grid-cols-4 gap-6 mt-20 max-w-3xl mx-auto"
         >
           {stats.map((stat, i) => (
@@ -75,10 +79,10 @@ export default function HeroSection() {
               key={stat.label}
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: 1 + i * 0.1 }}
+              transition={{ duration: 0.4, delay: 0.95 + i * 0.08 }}
               className="text-center"
             >
-              <div className="text-3xl sm:text-4xl font-heading font-bold text-gradient-gold">{stat.value}</div>
+              <div className="text-2xl sm:text-3xl font-heading font-bold text-gradient-green">{stat.value}</div>
               <div className="text-sm text-muted-foreground mt-1">{stat.label}</div>
             </motion.div>
           ))}
