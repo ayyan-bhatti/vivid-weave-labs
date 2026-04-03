@@ -20,10 +20,10 @@ export default function ArsalanPage() {
           >
             <div className="flex items-center gap-5 mb-8">
               <div className="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center">
-                <span className="text-2xl font-heading font-bold text-primary">AR</span>
+                <span className="text-2xl font-heading font-bold text-primary">AH</span>
               </div>
               <div>
-                <h1 className="text-3xl sm:text-4xl font-heading font-bold text-foreground">Arsalan</h1>
+                <h1 className="text-3xl sm:text-4xl font-heading font-bold text-foreground">Arsalan Haider</h1>
                 <p className="text-primary font-medium">Founder & Lead Analyst</p>
               </div>
             </div>
