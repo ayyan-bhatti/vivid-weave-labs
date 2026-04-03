@@ -3,23 +3,23 @@ import { Link } from 'react-router-dom';
 
 const team = [
   {
-    name: 'Arsalan',
+    name: 'Arsalan Haider',
     role: 'Founder & Lead Analyst',
-    initials: 'AR',
+    initials: 'AH',
     bio: 'Passionate about forex and crypto markets with years of hands-on trading experience. Founded Capital Crew to build a transparent and educational trading community.',
     hasPage: true,
   },
   {
-    name: 'Hamza',
+    name: 'Ayyan',
     role: 'Technical Analyst',
-    initials: 'HZ',
+    initials: 'AY',
     bio: 'Specializes in technical chart analysis and price action strategies across multiple timeframes. Focuses on helping members read the markets with clarity.',
     hasPage: false,
   },
   {
-    name: 'Ali',
+    name: 'Huzaifah',
     role: 'Community Manager & Educator',
-    initials: 'AL',
+    initials: 'HZ',
     bio: 'Manages the day-to-day community operations and creates educational content to help beginners understand the fundamentals of trading.',
     hasPage: false,
   },
