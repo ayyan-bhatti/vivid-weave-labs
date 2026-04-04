@@ -32,27 +32,17 @@ export default function ArsalanPage() {
               <div>
                 <h2 className="text-xl font-heading font-semibold text-foreground mb-4">My Journey</h2>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
-                  <p>
-                    I started trading like most people — excited, underprepared, and full of unrealistic expectations. The early days were tough. I lost money, made emotional decisions, and learned the hard way that trading isn't about quick wins.
-                  </p>
-                  <p>
-                    Over time, I developed discipline. I studied price action, risk management, and market psychology. Slowly, my approach became more structured. I started journaling every trade, analyzing my mistakes, and building systematic strategies.
-                  </p>
-                  <p>
-                    Capital Crew was born from a simple idea: I wished I had a community like this when I started. A place where people share honest analysis, admit their losses, and help each other get better — without the fake guru nonsense.
-                  </p>
+                  <p>I started trading like most people — excited, underprepared, and full of unrealistic expectations. The early days were tough. I lost money, made emotional decisions, and learned the hard way that trading isn't about quick wins.</p>
+                  <p>Over time, I developed discipline. I studied price action, risk management, and market psychology. Slowly, my approach became more structured. I started journaling every trade, analyzing my mistakes, and building systematic strategies.</p>
+                  <p>Capital Crew was born from a simple idea: I wished I had a community like this when I started. A place where people share honest analysis, admit their losses, and help each other get better — without the fake guru nonsense.</p>
                 </div>
               </div>
 
               <div>
                 <h2 className="text-xl font-heading font-semibold text-foreground mb-4">My Vision</h2>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
-                  <p>
-                    I want Capital Crew to be the most transparent and educational trading community out there. Not the biggest — the most genuine. A place where people actually learn and grow, not where they're sold dreams.
-                  </p>
-                  <p>
-                    My goal is to keep building high-quality educational content, share honest daily analysis, and create an environment where traders of all levels can develop real skills. Trading is a marathon, not a sprint — and I want this community to reflect that mindset.
-                  </p>
+                  <p>I want Capital Crew to be the most transparent and educational trading community out there. Not the biggest — the most genuine.</p>
+                  <p>My goal is to keep building high-quality educational content, share honest daily analysis, and create an environment where traders of all levels can develop real skills. Trading is a marathon, not a sprint.</p>
                 </div>
               </div>
 
@@ -61,37 +51,17 @@ export default function ArsalanPage() {
                 <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
                   <div>
                     <label className="text-xs text-muted-foreground tracking-widest uppercase block mb-1.5">Name</label>
-                    <input
-                      type="text"
-                      value={form.name}
-                      onChange={(e) => setForm({ ...form, name: e.target.value })}
-                      className="w-full bg-secondary border border-border rounded-lg px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-primary"
-                      placeholder="Your name"
-                    />
+                    <input type="text" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} className="w-full bg-secondary border border-border rounded-lg px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-primary" placeholder="Your name" />
                   </div>
                   <div>
                     <label className="text-xs text-muted-foreground tracking-widest uppercase block mb-1.5">Email</label>
-                    <input
-                      type="email"
-                      value={form.email}
-                      onChange={(e) => setForm({ ...form, email: e.target.value })}
-                      className="w-full bg-secondary border border-border rounded-lg px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-primary"
-                      placeholder="you@example.com"
-                    />
+                    <input type="email" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} className="w-full bg-secondary border border-border rounded-lg px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-primary" placeholder="you@example.com" />
                   </div>
                   <div>
                     <label className="text-xs text-muted-foreground tracking-widest uppercase block mb-1.5">Message</label>
-                    <textarea
-                      value={form.message}
-                      onChange={(e) => setForm({ ...form, message: e.target.value })}
-                      rows={4}
-                      className="w-full bg-secondary border border-border rounded-lg px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-primary resize-none"
-                      placeholder="Your message or question..."
-                    />
+                    <textarea value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} rows={4} className="w-full bg-secondary border border-border rounded-lg px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-primary resize-none" placeholder="Your message or question..." />
                   </div>
-                  <Button type="submit" className="w-full bg-primary text-primary-foreground hover:bg-primary/90 font-semibold py-6 text-base glow-green-sm">
-                    Send Message
-                  </Button>
+                  <Button type="submit" className="w-full bg-primary text-primary-foreground hover:bg-primary/90 font-semibold py-6 text-base glow-primary-sm">Send Message</Button>
                 </form>
               </div>
             </div>

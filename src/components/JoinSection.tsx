@@ -6,7 +6,7 @@ export default function JoinSection() {
   return (
     <section id="join" className="py-24 relative">
       <div className="absolute inset-0 opacity-20"
-        style={{ background: 'radial-gradient(ellipse at 50% 50%, hsl(142 71% 45% / 0.08), transparent 60%)' }}
+        style={{ background: 'radial-gradient(ellipse at 50% 50%, hsl(239 84% 67% / 0.08), transparent 60%)' }}
       />
       <div className="container mx-auto px-6 relative z-10 text-center">
         <motion.div
@@ -20,11 +20,11 @@ export default function JoinSection() {
             Join our community of traders who believe in education, discipline, and transparent analysis. No hype — just real learning.
           </p>
           <div className="flex items-center justify-center gap-4 mt-8">
-            <Link to="/contact">
-              <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold px-8 glow-green-sm">
+            <a href="https://t.me/capitalcrewofficial" target="_blank" rel="noopener noreferrer">
+              <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold px-8 glow-primary-sm">
                 Join Capital Crew
               </Button>
-            </Link>
+            </a>
             <Link to="/team">
               <Button size="lg" variant="outline" className="border-border text-foreground hover:bg-card">
                 Meet the Team
