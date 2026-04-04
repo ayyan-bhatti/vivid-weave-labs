@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import Scene3D from './Scene3D';
+import heroBg from '@/assets/hero-bg.png';
 
 const stats = [
   { value: '500+', label: 'Community Members' },
@@ -13,6 +14,17 @@ const stats = [
 export default function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+      {/* Background image */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src={heroBg}
+          alt=""
+          className="w-full h-full object-cover opacity-[0.07] dark:opacity-[0.04]"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/80 to-background" />
+      </div>
+
+      {/* Accent glow */}
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full opacity-15"
         style={{ background: 'radial-gradient(circle, hsl(239 84% 67% / 0.25), transparent 70%)' }}
       />
@@ -24,7 +36,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-card/50 mb-8"
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-card/50 backdrop-blur-sm mb-8"
         >
           <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
           <span className="text-sm text-muted-foreground">Trading Education Community</span>
