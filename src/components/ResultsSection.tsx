@@ -12,7 +12,7 @@ export default function ResultsSection() {
   return (
     <section id="results" className="py-24 relative">
       <div className="absolute inset-0 opacity-20"
-        style={{ background: 'radial-gradient(ellipse at 50% 0%, hsl(142 71% 45% / 0.06), transparent 60%)' }}
+        style={{ background: 'radial-gradient(ellipse at 50% 0%, hsl(239 84% 67% / 0.06), transparent 60%)' }}
       />
       <div className="container mx-auto px-6 relative z-10">
         <motion.div
@@ -36,7 +36,7 @@ export default function ResultsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.08 }}
-              className="bg-card border border-border rounded-2xl p-6 text-center"
+              className="bg-card border border-border rounded-2xl p-6 text-center hover:border-primary/20 transition-all duration-300"
             >
               <m.icon className="w-6 h-6 text-primary mx-auto mb-3" />
               <p className="text-[11px] text-muted-foreground tracking-widest uppercase mb-2">{m.label}</p>

@@ -14,7 +14,7 @@ export default function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full opacity-15"
-        style={{ background: 'radial-gradient(circle, hsl(142 71% 45% / 0.25), transparent 70%)' }}
+        style={{ background: 'radial-gradient(circle, hsl(239 84% 67% / 0.25), transparent 70%)' }}
       />
 
       <Scene3D />
@@ -24,9 +24,9 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-green-subtle bg-card/50 mb-8"
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-card/50 mb-8"
         >
-          <span className="w-2 h-2 rounded-full bg-primary animate-pulse-green" />
+          <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
           <span className="text-sm text-muted-foreground">Trading Education Community</span>
         </motion.div>
 
@@ -38,7 +38,7 @@ export default function HeroSection() {
         >
           <span className="text-foreground">Learn. Trade.</span>
           <br />
-          <span className="text-gradient-green">Grow Together.</span>
+          <span className="text-gradient">Grow Together.</span>
         </motion.h1>
 
         <motion.p
@@ -56,11 +56,11 @@ export default function HeroSection() {
           transition={{ duration: 0.5, delay: 0.65 }}
           className="flex items-center justify-center gap-4 mt-10"
         >
-          <Link to="/contact">
-            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold px-8 glow-green-sm">
+          <a href="https://t.me/capitalcrewofficial" target="_blank" rel="noopener noreferrer">
+            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold px-8 glow-primary-sm">
               Join the Community
             </Button>
-          </Link>
+          </a>
           <Link to="/about">
             <Button size="lg" variant="outline" className="border-border text-foreground hover:bg-card">
               Learn More
@@ -82,7 +82,7 @@ export default function HeroSection() {
               transition={{ duration: 0.4, delay: 0.95 + i * 0.08 }}
               className="text-center"
             >
-              <div className="text-2xl sm:text-3xl font-heading font-bold text-gradient-green">{stat.value}</div>
+              <div className="text-2xl sm:text-3xl font-heading font-bold text-gradient">{stat.value}</div>
               <div className="text-sm text-muted-foreground mt-1">{stat.label}</div>
             </motion.div>
           ))}

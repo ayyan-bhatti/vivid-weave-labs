@@ -21,7 +21,7 @@ export default function AboutSection() {
             <h2 className="text-3xl sm:text-4xl font-heading font-bold text-foreground leading-tight">
               Building a Community of
               <br />
-              <span className="text-gradient-green">Informed Traders</span>
+              <span className="text-gradient">Informed Traders</span>
             </h2>
             <p className="mt-6 text-muted-foreground leading-relaxed max-w-lg">
               Capital Crew is a trading education community founded on the principle that consistent growth comes from disciplined learning, honest analysis, and shared knowledge. We don't promise overnight riches — we focus on education, strategy, and risk management.
@@ -38,7 +38,7 @@ export default function AboutSection() {
                   viewport={{ once: true }}
                   transition={{ delay: 0.2 + i * 0.1 }}
                 >
-                  <div className="text-2xl font-heading font-bold text-gradient-green">{h.value}</div>
+                  <div className="text-2xl font-heading font-bold text-gradient">{h.value}</div>
                   <div className="text-sm text-muted-foreground mt-1">{h.label}</div>
                 </motion.div>
               ))}
