@@ -17,7 +17,7 @@ const TikTokIcon = () => (
 
 const socials = [
   { icon: Send, href: 'https://t.me/capitalcrewofficial', label: 'Telegram' },
-  { icon: InstagramIcon, href: 'https://www.instagram.com/capitalcrew.official?igsh=MWlnbmZ0MDcyYjlnNQ==', label: 'Instagram' },
+  { icon: InstagramIcon, href: 'https://www.instagram.com/capitalcrew.official?igsh=bzg1cGViMGs4ZGxo', label: 'Instagram' },
   { icon: TikTokIcon, href: 'https://www.tiktok.com/@capitalcrewofficial3?_r=1&_t=ZN-95G0DDgky1O', label: 'TikTok' },
 ];
 

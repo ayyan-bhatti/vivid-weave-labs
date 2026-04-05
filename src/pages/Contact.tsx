@@ -3,7 +3,7 @@ import Footer from '@/components/Footer';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { useState } from 'react';
-import { Send, Mail, MessageCircle } from 'lucide-react';
+import { Send, Mail } from 'lucide-react';
 
 const InstagramIcon = ({ className }: { className?: string }) => (
   <svg viewBox="0 0 24 24" fill="currentColor" className={className}>
@@ -31,7 +31,7 @@ export default function Contact() {
               Have questions about our community? Want to learn more before joining? Reach out — we'd love to hear from you.
             </p>
 
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
+            <div className="grid sm:grid-cols-3 gap-6 mb-10">
               <a
                 href="https://t.me/capitalcrewofficial"
                 target="_blank"
@@ -44,20 +44,9 @@ export default function Contact() {
                 <p className="text-sm font-semibold text-foreground">Telegram</p>
                 <p className="text-xs text-muted-foreground">Join our channel</p>
               </a>
+
               <a
-                href="https://wa.me/message/capitalcrew"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="glass-card rounded-xl p-5 hover:border-primary/30 hover:scale-[1.02] transition-all duration-300 text-center"
-              >
-                <div className="w-10 h-10 rounded-lg bg-green-500/10 flex items-center justify-center mx-auto mb-3">
-                  <MessageCircle className="w-5 h-5 text-green-500" />
-                </div>
-                <p className="text-sm font-semibold text-foreground">WhatsApp</p>
-                <p className="text-xs text-muted-foreground">Message us</p>
-              </a>
-              <a
-                href="https://www.instagram.com/capitalcrew.official?igsh=MWlnbmZ0MDcyYjlnNQ=="
+                href="https://www.instagram.com/capitalcrew.official?igsh=bzg1cGViMGs4ZGxo"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="glass-card rounded-xl p-5 hover:border-primary/30 hover:scale-[1.02] transition-all duration-300 text-center"

@@ -72,7 +72,7 @@ export default function TeamSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="bg-card border border-border rounded-2xl p-8 text-center"
+              className="bg-card border border-border rounded-2xl p-8 text-center transition-all duration-300 hover:glow-primary-sm hover:border-primary/50 hover:-translate-y-2 hover:bg-card/80"
               style={{ boxShadow: 'var(--shadow-card)' }}
             >
               <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-5">
@@ -83,7 +83,7 @@ export default function TeamSection() {
               <p className="text-sm text-muted-foreground mt-4 leading-relaxed">{member.bio}</p>
               {member.hasPage && (
                 <Link
-                  to="/arsalan"
+                  to="/mentor"
                   className="inline-block mt-4 text-sm text-primary hover:text-primary/80 font-medium transition-colors"
                 >
                   View Journey →
@@ -102,7 +102,7 @@ export default function TeamSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: (i + 2) * 0.1 }}
-              className="bg-card border border-border rounded-2xl p-8 text-center"
+              className="bg-card border border-border rounded-2xl p-8 text-center transition-all duration-300 hover:glow-primary-sm hover:border-primary/50 hover:-translate-y-2 hover:bg-card/80"
               style={{ boxShadow: 'var(--shadow-card)' }}
             >
               <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-5">

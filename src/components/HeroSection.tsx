@@ -1,14 +1,22 @@
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import TradingCandlesBackground from './TradingCandlesBackground';
 import { ArrowRight, TrendingUp } from 'lucide-react';
 
 export default function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-      {/* Trading candles animated background */}
-      <TradingCandlesBackground />
+      {/* Cinematic background video */}
+      <div className="absolute inset-0 z-0 flex items-center justify-center">
+        <video 
+          autoPlay 
+          loop 
+          muted 
+          className="w-full h-full object-cover opacity-70"
+        >
+          <source src="/bg.mp4.mp4" type="video/mp4" />
+        </video>
+      </div>
 
       {/* Dark overlay for depth */}
       <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-background/60 to-background z-[1]" />
