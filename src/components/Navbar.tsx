@@ -10,7 +10,7 @@ const navLinks = [
   { label: 'Home', href: '/' },
   { label: 'About', href: '/about' },
   { label: 'Team', href: '/team' },
-  { label: 'Arsalan Haider', href: '/arsalan' },
+  { label: 'Mentor', href: '/mentor' },
   { label: 'Contact', href: '/contact' },
 ];
 
