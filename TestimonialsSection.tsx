@@ -1,0 +1,1 @@
+const testimonials = [];\n\nexport default testimonials;
