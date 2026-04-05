@@ -1,3 +1,4 @@
+// Navbar.tsx
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Sun, Moon } from 'lucide-react';
@@ -10,7 +11,7 @@ const navLinks = [
   { label: 'Home', href: '/' },
   { label: 'About', href: '/about' },
   { label: 'Team', href: '/team' },
-  { label: 'Mentor', href: '/mentor' },
+  { label: 'Mentor', href: '/mentor' }, // already correct
   { label: 'Contact', href: '/contact' },
 ];
 
@@ -24,15 +25,15 @@ export default function Navbar() {
       initial={{ y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-      className="fixed top-0 left-0 right-0 z-50 bg-surface-glass border-b border-border"
+      className="fixed top-0 left-0 right-0 z-50 bg-surface-glass border-b border-border text-center"
     >
-      <div className="container mx-auto flex items-center justify-between py-3 px-6">
-        <Link to="/" className="flex items-center gap-3">
+      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between py-3 px-6">
+        <Link to="/" className="flex items-center gap-3 justify-center w-full md:w-auto">
           <img src={logo} alt="Capital Crew" className="w-10 h-10 rounded-lg object-cover" />
           <span className="font-heading font-semibold text-lg text-foreground tracking-tight">Capital Crew</span>
         </Link>
 
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-8 w-full justify-center">
           {navLinks.map((link) => (
             <Link
               key={link.label}
@@ -48,7 +49,7 @@ export default function Navbar() {
           ))}
         </div>
 
-        <div className="hidden md:flex items-center gap-3">
+        <div className="hidden md:flex items-center gap-3 justify-center">
           <button
             onClick={toggleTheme}
             className="w-9 h-9 rounded-lg border border-border flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-muted transition-all duration-300"
@@ -70,7 +71,7 @@ export default function Navbar() {
           </Link>
         </div>
 
-        <div className="flex md:hidden items-center gap-2">
+        <div className="flex md:hidden items-center gap-2 justify-center w-full">
           <button
             onClick={toggleTheme}
             className="w-9 h-9 rounded-lg border border-border flex items-center justify-center text-muted-foreground"
@@ -101,6 +102,7 @@ export default function Navbar() {
                   className={`transition-colors py-2 ${
                     location.pathname === link.href ? 'text-primary font-medium' : 'text-muted-foreground hover:text-foreground'
                   }`}
+                  style={{ textAlign: 'center' }}
                 >
                   {link.label}
                 </Link>
