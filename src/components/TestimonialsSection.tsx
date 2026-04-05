@@ -1,28 +1,51 @@
-import { motion } from 'framer-motion';
-import { Star } from 'lucide-react';
+import { motion, useState } from 'framer-motion';
+import { ChevronLeft, ChevronRight, Star } from 'lucide-react';
+import { useState as useStateReact } from 'react';
 
 const testimonials = [
   {
     name: 'Ahmed K.',
-    role: 'Community Member',
+    role: 'Forex Trader',
     initials: 'AK',
-    text: 'Capital Crew helped me understand risk management properly. The daily analysis gives real reasoning behind every idea — not just "buy here, sell there." I\'ve learned more in 3 months than a year of trying alone.',
+    text: 'Capital Crew transformed my trading approach. The daily analysis with clear reasoning helped me understand the "why" behind every trade. I went from random entries to structured setups.',
+    rating: 5,
   },
   {
     name: 'Zain R.',
-    role: 'Beginner Trader',
+    role: 'Crypto Enthusiast',
     initials: 'ZR',
-    text: 'As someone completely new to trading, this community was exactly what I needed. The educational content is clear, no unnecessary hype, and the team is always available to answer questions.',
+    text: 'As a complete beginner, the mentorship program was invaluable. Arsalan and the team took time to explain concepts I struggled with. The community is genuinely supportive.',
+    rating: 5,
   },
   {
     name: 'Fatima S.',
-    role: 'Forex Enthusiast',
+    role: 'Stock Market Investor',
     initials: 'FS',
-    text: 'What I appreciate most is the transparency. They show the reasoning behind every setup and aren\'t afraid to admit when something doesn\'t work out. That honesty builds real trust.',
+    text: 'The transparency sets Capital Crew apart. They share both wins and losses with full analysis. No cherry-picked results, no fake screenshots. Just honest education.',
+    rating: 5,
+  },
+  {
+    name: 'Omar H.',
+    role: 'Swing Trader',
+    initials: 'OH',
+    text: 'The risk management framework alone was worth joining. I used to over-leverage every trade. Now I have a disciplined system that protects my capital while still capturing solid moves.',
+    rating: 5,
+  },
+  {
+    name: 'Sarah M.',
+    role: 'Part-time Trader',
+    initials: 'SM',
+    text: 'Balancing trading with a full-time job was hard until I found Capital Crew. The evening analysis sessions and weekend breakdowns fit perfectly into my schedule.',
+    rating: 5,
   },
 ];
 
 export default function TestimonialsSection() {
+  const [current, setCurrent] = useStateReact(0);
+
+  const next = () => setCurrent((c) => (c + 1) % testimonials.length);
+  const prev = () => setCurrent((c) => (c - 1 + testimonials.length) % testimonials.length);
+
   return (
     <section id="reviews" className="py-24 relative">
       <div className="container mx-auto px-6 relative z-10">
@@ -32,39 +55,66 @@ export default function TestimonialsSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <p className="text-xs text-primary tracking-widest uppercase font-semibold mb-3">Testimonials</p>
-          <h2 className="text-3xl sm:text-4xl font-heading font-bold text-foreground">What Members Say</h2>
-          <p className="mt-4 text-muted-foreground">Real feedback from real community members.</p>
+          <p className="text-xs text-primary tracking-widest uppercase font-semibold mb-3">Client Reviews</p>
+          <h2 className="text-3xl sm:text-4xl font-heading font-bold text-foreground">Trusted by Traders Worldwide</h2>
+          <p className="mt-4 text-muted-foreground">Hear from members who have grown with Capital Crew.</p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-6">
-          {testimonials.map((t, i) => (
-            <motion.div
-              key={t.name}
-              initial={{ opacity: 0, y: 25 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              className="bg-card border border-border rounded-2xl p-8 flex flex-col"
-              style={{ boxShadow: 'var(--shadow-card)' }}
+        {/* Slider */}
+        <div className="max-w-3xl mx-auto">
+          <motion.div
+            key={current}
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -30 }}
+            transition={{ duration: 0.4 }}
+            className="glass-card rounded-2xl p-8 sm:p-10 text-center"
+          >
+            <div className="flex justify-center gap-1 mb-6">
+              {[...Array(testimonials[current].rating)].map((_, j) => (
+                <Star key={j} className="w-5 h-5 fill-accent text-accent" />
+              ))}
+            </div>
+            <p className="text-lg text-foreground/90 leading-relaxed mb-8 italic">
+              "{testimonials[current].text}"
+            </p>
+            <div className="flex items-center justify-center gap-3">
+              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-sm font-bold text-primary">
+                {testimonials[current].initials}
+              </div>
+              <div className="text-left">
+                <p className="font-semibold text-foreground">{testimonials[current].name}</p>
+                <p className="text-sm text-muted-foreground">{testimonials[current].role}</p>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Controls */}
+          <div className="flex items-center justify-center gap-4 mt-8">
+            <button
+              onClick={prev}
+              className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-primary/30 transition-all"
             >
-              <div className="flex gap-1 mb-5">
-                {[...Array(5)].map((_, j) => (
-                  <Star key={j} className="w-4 h-4 fill-primary text-primary" />
-                ))}
-              </div>
-              <p className="text-sm text-muted-foreground leading-relaxed flex-1">"{t.text}"</p>
-              <div className="flex items-center gap-3 mt-6 pt-6 border-t border-border">
-                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-xs font-semibold text-primary">
-                  {t.initials}
-                </div>
-                <div>
-                  <p className="text-sm font-medium text-foreground">{t.name}</p>
-                  <p className="text-xs text-muted-foreground">{t.role}</p>
-                </div>
-              </div>
-            </motion.div>
-          ))}
+              <ChevronLeft className="w-5 h-5" />
+            </button>
+            <div className="flex gap-2">
+              {testimonials.map((_, i) => (
+                <button
+                  key={i}
+                  onClick={() => setCurrent(i)}
+                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                    i === current ? 'bg-primary w-6' : 'bg-muted-foreground/30 hover:bg-muted-foreground/50'
+                  }`}
+                />
+              ))}
+            </div>
+            <button
+              onClick={next}
+              className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-primary/30 transition-all"
+            >
+              <ChevronRight className="w-5 h-5" />
+            </button>
+          </div>
         </div>
       </div>
     </section>

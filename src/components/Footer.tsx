@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Send } from 'lucide-react';
+import { Send, Mail } from 'lucide-react';
 import Disclaimer from './Disclaimer';
 import logo from '@/assets/logo.png';
 
@@ -33,9 +33,12 @@ export default function Footer() {
                 <img src={logo} alt="Capital Crew" className="w-8 h-8 rounded-lg object-cover" />
                 <span className="font-heading font-semibold text-foreground">Capital Crew</span>
               </div>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                A trading education community focused on transparency, learning, and disciplined growth.
+              <p className="text-sm text-muted-foreground leading-relaxed mb-3">
+                A professional trading community focused on education, transparency, and disciplined market analysis.
               </p>
+              <a href="mailto:capitalcrewofficial03@gmail.com" className="inline-flex items-center gap-2 text-xs text-muted-foreground hover:text-primary transition-colors">
+                <Mail className="w-3.5 h-3.5" /> capitalcrewofficial03@gmail.com
+              </a>
             </div>
             <div>
               <h4 className="font-heading font-semibold text-foreground text-sm mb-4">Pages</h4>

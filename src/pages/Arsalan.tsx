@@ -34,7 +34,7 @@ export default function ArsalanPage() {
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
                   <p>I started trading like most people — excited, underprepared, and full of unrealistic expectations. The early days were tough. I lost money, made emotional decisions, and learned the hard way that trading isn't about quick wins.</p>
                   <p>Over time, I developed discipline. I studied price action, risk management, and market psychology. Slowly, my approach became more structured. I started journaling every trade, analyzing my mistakes, and building systematic strategies.</p>
-                  <p>Capital Crew was born from a simple idea: I wished I had a community like this when I started. A place where people share honest analysis, admit their losses, and help each other get better — without the fake guru nonsense.</p>
+                  <p>Capital Crew was born from a simple idea: I wished I had a mentor and a community like this when I started. A place where people share honest analysis, admit their losses, and help each other improve — without the fake guru nonsense.</p>
                 </div>
               </div>
 
@@ -42,11 +42,11 @@ export default function ArsalanPage() {
                 <h2 className="text-xl font-heading font-semibold text-foreground mb-4">My Vision</h2>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
                   <p>I want Capital Crew to be the most transparent and educational trading community out there. Not the biggest — the most genuine.</p>
-                  <p>My goal is to keep building high-quality educational content, share honest daily analysis, and create an environment where traders of all levels can develop real skills. Trading is a marathon, not a sprint.</p>
+                  <p>My goal is to mentor the next generation of disciplined traders, share honest daily analysis, and create an environment where traders of all levels can develop real skills. Trading is a marathon, not a sprint.</p>
                 </div>
               </div>
 
-              <div className="bg-card border border-border rounded-2xl p-8 mt-10" style={{ boxShadow: 'var(--shadow-card)' }}>
+              <div className="glass-card rounded-2xl p-8 mt-10">
                 <h3 className="font-heading font-semibold text-foreground text-lg mb-6">Send Me a Message</h3>
                 <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
                   <div>

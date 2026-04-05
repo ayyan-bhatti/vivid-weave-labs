@@ -9,11 +9,24 @@ export default function PerformanceChart() {
       transition={{ duration: 0.6 }}
       className="container mx-auto px-6 -mt-6 relative z-10"
     >
-      <div className="bg-card rounded-2xl border border-border p-6 sm:p-8 text-center" style={{ boxShadow: 'var(--shadow-card)' }}>
-        <p className="text-xs text-muted-foreground tracking-widest uppercase mb-2">What We Focus On</p>
-        <p className="text-lg font-heading font-semibold text-foreground mb-4">Education · Analysis · Risk Management · Community</p>
-        <p className="text-sm text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-          We share daily market analysis, educational breakdowns, and trade ideas with full reasoning. Our focus is on helping you develop the skills to make your own informed trading decisions.
+      <div className="glass-card rounded-2xl p-6 sm:p-8 text-center">
+        <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-10">
+          {['Forex', 'Crypto', 'Stocks', 'Commodities'].map((market, i) => (
+            <motion.div
+              key={market}
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 + i * 0.1 }}
+              className="flex items-center gap-2"
+            >
+              <div className="w-2 h-2 rounded-full bg-primary" />
+              <span className="text-sm font-medium text-foreground">{market}</span>
+            </motion.div>
+          ))}
+        </div>
+        <p className="text-sm text-muted-foreground mt-4 max-w-xl mx-auto">
+          Multi-market coverage with daily technical and fundamental analysis across all major asset classes.
         </p>
       </div>
     </motion.div>
