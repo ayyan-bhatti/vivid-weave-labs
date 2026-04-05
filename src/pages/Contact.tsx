@@ -3,7 +3,7 @@ import Footer from '@/components/Footer';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { useState } from 'react';
-import { Send, Mail } from 'lucide-react';
+import { Send, Mail, MessageCircle } from 'lucide-react';
 
 const InstagramIcon = ({ className }: { className?: string }) => (
   <svg viewBox="0 0 24 24" fill="currentColor" className={className}>
@@ -31,50 +31,56 @@ export default function Contact() {
               Have questions about our community? Want to learn more before joining? Reach out — we'd love to hear from you.
             </p>
 
-            <div className="grid sm:grid-cols-3 gap-4 mb-10">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
               <a
                 href="https://t.me/capitalcrewofficial"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-4 bg-card border border-border rounded-xl p-5 hover:border-primary/30 hover:scale-[1.02] transition-all duration-300"
+                className="glass-card rounded-xl p-5 hover:border-primary/30 hover:scale-[1.02] transition-all duration-300 text-center"
               >
-                <div className="w-10 h-10 rounded-lg flex items-center justify-center" style={{ backgroundColor: '#0088cc20' }}>
+                <div className="w-10 h-10 rounded-lg flex items-center justify-center mx-auto mb-3" style={{ backgroundColor: '#0088cc20' }}>
                   <Send className="w-5 h-5" style={{ color: '#0088cc' }} />
                 </div>
-                <div>
-                  <p className="text-sm font-semibold text-foreground">Telegram</p>
-                  <p className="text-xs text-muted-foreground">Join our channel</p>
+                <p className="text-sm font-semibold text-foreground">Telegram</p>
+                <p className="text-xs text-muted-foreground">Join our channel</p>
+              </a>
+              <a
+                href="https://wa.me/message/capitalcrew"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="glass-card rounded-xl p-5 hover:border-primary/30 hover:scale-[1.02] transition-all duration-300 text-center"
+              >
+                <div className="w-10 h-10 rounded-lg bg-green-500/10 flex items-center justify-center mx-auto mb-3">
+                  <MessageCircle className="w-5 h-5 text-green-500" />
                 </div>
+                <p className="text-sm font-semibold text-foreground">WhatsApp</p>
+                <p className="text-xs text-muted-foreground">Message us</p>
               </a>
               <a
                 href="https://www.instagram.com/capitalcrew.official?igsh=MWlnbmZ0MDcyYjlnNQ=="
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-4 bg-card border border-border rounded-xl p-5 hover:border-primary/30 hover:scale-[1.02] transition-all duration-300"
+                className="glass-card rounded-xl p-5 hover:border-primary/30 hover:scale-[1.02] transition-all duration-300 text-center"
               >
-                <div className="w-10 h-10 rounded-lg bg-pink-500/10 flex items-center justify-center">
+                <div className="w-10 h-10 rounded-lg bg-pink-500/10 flex items-center justify-center mx-auto mb-3">
                   <InstagramIcon className="w-5 h-5 text-pink-500" />
                 </div>
-                <div>
-                  <p className="text-sm font-semibold text-foreground">Instagram</p>
-                  <p className="text-xs text-muted-foreground">Follow us</p>
-                </div>
+                <p className="text-sm font-semibold text-foreground">Instagram</p>
+                <p className="text-xs text-muted-foreground">Follow us</p>
               </a>
               <a
-                href="mailto:contact@capitalcrew.com"
-                className="flex items-center gap-4 bg-card border border-border rounded-xl p-5 hover:border-primary/30 hover:scale-[1.02] transition-all duration-300"
+                href="mailto:capitalcrewofficial03@gmail.com"
+                className="glass-card rounded-xl p-5 hover:border-primary/30 hover:scale-[1.02] transition-all duration-300 text-center"
               >
-                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-3">
                   <Mail className="w-5 h-5 text-primary" />
                 </div>
-                <div>
-                  <p className="text-sm font-semibold text-foreground">Email Us</p>
-                  <p className="text-xs text-muted-foreground">contact@capitalcrew.com</p>
-                </div>
+                <p className="text-sm font-semibold text-foreground">Email</p>
+                <p className="text-xs text-muted-foreground">capitalcrewofficial03</p>
               </a>
             </div>
 
-            <div className="bg-card border border-border rounded-2xl p-8" style={{ boxShadow: 'var(--shadow-card)' }}>
+            <div className="glass-card rounded-2xl p-8">
               <h3 className="font-heading font-semibold text-foreground text-lg mb-6">Send a Message</h3>
               <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
                 <div className="grid sm:grid-cols-2 gap-4">
