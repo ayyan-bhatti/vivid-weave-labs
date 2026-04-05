@@ -3,10 +3,8 @@ import HeroSection from '@/components/HeroSection';
 import PerformanceChart from '@/components/PerformanceChart';
 import AboutSection from '@/components/AboutSection';
 import ServicesSection from '@/components/ServicesSection';
-import ResultsSection from '@/components/ResultsSection';
 import AdvantagesSection from '@/components/AdvantagesSection';
 import TeamSection from '@/components/TeamSection';
-import TestimonialsSection from '@/components/TestimonialsSection';
 import JoinSection from '@/components/JoinSection';
 import Footer from '@/components/Footer';
 
@@ -18,10 +16,8 @@ const Index = () => {
       <PerformanceChart />
       <AboutSection />
       <ServicesSection />
-      <ResultsSection />
       <AdvantagesSection />
       <TeamSection />
-      <TestimonialsSection />
       <JoinSection />
       <Footer />
     </div>

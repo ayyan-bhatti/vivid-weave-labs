@@ -24,7 +24,7 @@ export default function ArsalanPage() {
               </div>
               <div>
                 <h1 className="text-3xl sm:text-4xl font-heading font-bold text-foreground">Arsalan Haider</h1>
-                <p className="text-primary font-medium">Founder & Lead Analyst</p>
+                <p className="text-primary font-medium">Founder & Mentor</p>
               </div>
             </div>
 

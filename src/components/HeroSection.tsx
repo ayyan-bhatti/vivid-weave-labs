@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import Scene3D from './Scene3D';
-import heroBg from '@/assets/hero-bg.png';
+import TradingCandlesBackground from './TradingCandlesBackground';
 
 const stats = [
   { value: '500+', label: 'Community Members' },
@@ -14,18 +14,14 @@ const stats = [
 export default function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-      {/* Background image */}
-      <div className="absolute inset-0 z-0">
-        <img
-          src={heroBg}
-          alt=""
-          className="w-full h-full object-cover opacity-[0.07] dark:opacity-[0.04]"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/80 to-background" />
-      </div>
+      {/* Trading candles animated background */}
+      <TradingCandlesBackground />
+
+      {/* Gradient overlay for readability */}
+      <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/70 to-background z-[1]" />
 
       {/* Accent glow */}
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full opacity-15"
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full opacity-15 z-[1]"
         style={{ background: 'radial-gradient(circle, hsl(239 84% 67% / 0.25), transparent 70%)' }}
       />
 
