@@ -4,10 +4,17 @@ import { Link } from 'react-router-dom';
 const team = [
   {
     name: 'Arsalan Haider',
-    role: 'Founder & Lead Analyst',
+    role: 'Founder & Mentor',
     initials: 'AH',
     bio: 'Passionate about forex and crypto markets with years of hands-on trading experience. Founded Capital Crew to build a transparent and educational trading community.',
     hasPage: true,
+  },
+  {
+    name: 'Shiza Gull',
+    role: 'SEO Specialist',
+    initials: 'SG',
+    bio: 'Drives the digital presence of Capital Crew through strategic SEO and content optimization, ensuring our community reaches traders who genuinely need guidance.',
+    hasPage: false,
   },
   {
     name: 'Ayyan',
@@ -21,6 +28,20 @@ const team = [
     role: 'Community Manager & Educator',
     initials: 'HZ',
     bio: 'Manages the day-to-day community operations and creates educational content to help beginners understand the fundamentals of trading.',
+    hasPage: false,
+  },
+  {
+    name: 'Basit Ali',
+    role: 'Dealer',
+    initials: 'BA',
+    bio: 'Handles trade execution and deal management with precision. Ensures smooth operations and timely communication within the trading pipeline.',
+    hasPage: false,
+  },
+  {
+    name: 'Komal',
+    role: 'Trader',
+    initials: 'KM',
+    bio: 'An active trader contributing live market insights and trade setups. Brings a disciplined approach to intraday and swing trading strategies.',
     hasPage: false,
   },
 ];
@@ -42,8 +63,9 @@ export default function TeamSection() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-          {team.map((member, i) => (
+        {/* Row 1: Arsalan & Shiza side by side */}
+        <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto mb-6">
+          {team.slice(0, 2).map((member, i) => (
             <motion.div
               key={member.name}
               initial={{ opacity: 0, y: 25 }}
@@ -67,6 +89,28 @@ export default function TeamSection() {
                   View Journey →
                 </Link>
               )}
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Row 2: Remaining members */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+          {team.slice(2).map((member, i) => (
+            <motion.div
+              key={member.name}
+              initial={{ opacity: 0, y: 25 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: (i + 2) * 0.1 }}
+              className="bg-card border border-border rounded-2xl p-8 text-center"
+              style={{ boxShadow: 'var(--shadow-card)' }}
+            >
+              <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-5">
+                <span className="text-lg font-heading font-bold text-primary">{member.initials}</span>
+              </div>
+              <h3 className="text-lg font-heading font-semibold text-foreground">{member.name}</h3>
+              <p className="text-sm text-primary mt-1">{member.role}</p>
+              <p className="text-sm text-muted-foreground mt-4 leading-relaxed">{member.bio}</p>
             </motion.div>
           ))}
         </div>

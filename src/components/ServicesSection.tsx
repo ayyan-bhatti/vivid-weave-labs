@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { BarChart3, GraduationCap, Users, TrendingUp } from 'lucide-react';
+import { BarChart3, GraduationCap, Users, Compass } from 'lucide-react';
 
 const services = [
   {
@@ -18,9 +18,9 @@ const services = [
     description: 'A private community of like-minded traders sharing ideas, asking questions, and growing together in a supportive environment.',
   },
   {
-    icon: TrendingUp,
-    title: 'Trade Ideas & Setups',
-    description: 'Curated trade ideas with entry levels, risk parameters, and reasoning explained — so you understand the "why" behind every setup.',
+    icon: Compass,
+    title: 'Mentorship',
+    description: 'Personalized guidance from experienced traders to help you develop discipline, refine your strategy, and navigate the markets with confidence.',
   },
 ];
 
