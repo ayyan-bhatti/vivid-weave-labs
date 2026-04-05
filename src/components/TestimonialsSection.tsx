@@ -1,6 +1,6 @@
-import { motion, useState } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { ChevronLeft, ChevronRight, Star } from 'lucide-react';
-import { useState as useStateReact } from 'react';
+import { useState } from 'react';
 
 const testimonials = [
   {
@@ -41,7 +41,7 @@ const testimonials = [
 ];
 
 export default function TestimonialsSection() {
-  const [current, setCurrent] = useStateReact(0);
+  const [current, setCurrent] = useState(0);
 
   const next = () => setCurrent((c) => (c + 1) % testimonials.length);
   const prev = () => setCurrent((c) => (c - 1 + testimonials.length) % testimonials.length);
